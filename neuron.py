@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 import numpy as np
 import random
 
@@ -121,4 +122,7 @@ if __name__ == '__main__':
 
     axes[numPoissonNeurons].plot(t, outputSpikeTrain, 'b')
 
+    red_patch = mpatches.Patch(color='red', label='Input Spike Train')
+    blue_patch = mpatches.Patch(color='blue', label='Output Spike Train')
+    plt.legend(handles=[red_patch, blue_patch], loc='best')
     plt.show()
